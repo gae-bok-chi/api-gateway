@@ -9,6 +9,8 @@ eureka:
       defaultZone: http://${EUREKA_HOST}:${EUREKA_PORT}/eureka
 
 spring:
+  profiles:
+    active: dev
   application:
     name: api-gateway
   cloud:
