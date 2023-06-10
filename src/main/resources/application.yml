@@ -6,7 +6,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://${EUREKA_HOST}:${EUREKA_PORT}/eureka
 
 spring:
   application:
@@ -30,3 +30,7 @@ management:
     web:
       exposure:
         include: health, beans, metrics, httptrace
+
+logging:
+  level:
+    org.springframework: DEBUG
